@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        </style>
+    
+        <title>Quiz Avengers</title>
+    </head>
+
+    <body>
+
+        <div id="quiz">
+
+            <div id="start-container">
+                <h1>Quiz Avengers</h1>
+                <p id="instructions">Plusieurs questions vous seron posé sur le thème des Avengers.<br>
+                Il y aura un compte a rebours de <strong>20 secondes</strong> à chaques questions.<br>
+                Vous perdrez 1 point s'il tombe a <strong>zéro!</strong></p>
+                <button id="start-button">Commencer</button>
+            </div>
+
+            <div id="question-container" class="hidden">
+                <h1 id="question-text">Question</h1>
+                <div id="answers-container">
+                    <button class="answer-button" id="answer1">Réponse 1</button>
+                    <button class="answer-button" id="answer2">Réponse 2</button>
+                    <button class="answer-button" id="answer3">Réponse 3</button>
+                    <button class="answer-button" id="answer4">Réponse 4</button>
+                </div>
+                <button id="validate-button" disabled>Valider</button>
+                <div id="timer-container">
+                    <p id="timer-text">timer</p>
+                </div>
+            </div>
+
+            <div id="about-container" class="hidden">
+                <h1 id="answer-result">Correct / Incorrect</h1>
+                <p id="about-answer">text</p>
+                <button id="next-button">Continuer</button>
+            </div>
+
+            <div id="score-container" class="hidden">
+                <h1 id="score-title"></h1>
+                <p id="score-text">Votre score est de <span id="score"></span><span id="questions"></span></p>
+                <button id="restart-button">Recommencer</button>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
