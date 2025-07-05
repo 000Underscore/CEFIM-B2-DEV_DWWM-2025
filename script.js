@@ -2,7 +2,7 @@ const questions = [
     { question: "Quel est le vrai nom d'Iron Man ?",
         answers: ["Steve Rogers", "Tony Stark", "Bruce Banner", "Clint Barton"],
         correct: 2,
-        about: "Le vrai nom d'Iron Man est Anthony Edward 'Tony' Stark, le célébre industriel milliardaire PDG de Stark Industrie."
+        about: "Le vrai nom d'Iron Man est Anthony Edward Stark, le célébre industriel milliardaire PDG de Stark Industrie."
     },
     { question: "Qui est le premier Avenger dans l’ordre chronologique des films du MCU ?",
         answers: ["Captain America", "Iron Man", "Black Widow", "Hulk"],
@@ -56,6 +56,7 @@ let timeLeft = 20;
 const scoreContainer = document.querySelector("#score-container");
 const scoreTitle = document.querySelector("#score-title");
 const scoreText = document.querySelector("#score");
+const scoreMessage = document.querySelector("#score-message");
 const restartButton = document.querySelector("#restart-button");
 
 let selectedAnswerIndex = null;
@@ -179,6 +180,13 @@ function showScore() {
     scoreTitle.textContent = "Le quiz est terminé !";
     scoreText.textContent = ` ${score} sur ${questions.length}`;
     restartButton.style.display = "block";
+    if (score === questions.length) {
+        scoreMessage.textContent = "Parfait ! Vous avez répondu correctement à toutes les questions !";
+    } else if (score >= questions.length / 2) {
+        scoreMessage.textContent = "Bien joué ! Vous avez un bon score !";
+    } else {
+        scoreMessage.textContent = "Vous pouvez faire mieux !";
+    }
 }
 
 function restartGame() {
