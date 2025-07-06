@@ -132,3 +132,31 @@ button:active {
   .animate-question {
     animation: fadeInZoom 0.2s ease-out;
 }
+
+@media (max-width: 700px) {
+    #quiz {
+        max-width: 95vw;
+        padding: 0 10px;
+        margin: 50% auto;
+    }
+
+    #answers-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body {
+        font-size: 55%;
+        padding: 10px;
+        height: auto;
+    }
+
+    #start-container h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+}
